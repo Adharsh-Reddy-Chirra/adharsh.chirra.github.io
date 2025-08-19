@@ -1,4 +1,4 @@
-# 🌐 Personal Portfolio Website  
+## 🌐 Personal Portfolio Website  
 
 Welcome to my personal portfolio! 🎉  
 This website is a showcase of my **projects, skills, and professional journey**.  
@@ -18,3 +18,4 @@ This website is a showcase of my **projects, skills, and professional journey**.
 - Responsive layout for desktop and mobile.  
 - Project detail pages with descriptions, screenshots, and links to source code/demo.  
 - Contact section with links to LinkedIn, GitHub, and email.  
+
