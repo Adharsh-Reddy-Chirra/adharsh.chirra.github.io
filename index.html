@@ -9,288 +9,338 @@
 
   <style>
     :root {
-      --bg-color: #0a0a0a;
-      --text-color: #f5f5f5;
-      --accent: #f8c291;
-      --hover: #f0932b;
-    }
-
-    body.light {
-      --bg-color: #ffffff;
-      --text-color: #1a1a1a;
-      --accent: #457b9d;
-      --hover: #1d3557;
+      --primary-color: #ffd166;
+      --secondary-color: #fcbf49;
+      --dark-bg: #161616;
+      --text-dark: #222;
+      --text-light: #f5f5f5;
     }
 
     body {
       font-family: 'Poppins', sans-serif;
-      background: var(--bg-color);
-      color: var(--text-color);
-      transition: background 0.5s ease, color 0.5s ease;
+      background-color: #fafafa;
+      color: var(--text-dark);
       line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
     }
 
+    a { text-decoration: none; }
+
+    .button {
+      display: inline-block;
+      background: var(--primary-color);
+      color: #111;
+      font-weight: 600;
+      padding: 0.7em 1.5em;
+      border-radius: 30px;
+      transition: 0.3s ease;
+    }
+    .button:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+
+    /* Intro Section */
     #intro {
       text-align: center;
-      padding: 5em 2em;
-      background: linear-gradient(135deg, var(--bg-color), #1a1a1a);
+      background: linear-gradient(135deg, var(--dark-bg), #2d2d2d);
+      color: var(--text-light);
+      padding: 6rem 2rem 5rem;
     }
 
     #intro h1 {
-      font-size: 3em;
-      color: var(--accent);
-      margin-bottom: 0.2em;
+      font-size: 3rem;
+      color: var(--primary-color);
     }
-
     #intro p {
-      font-size: 1.1em;
-      max-width: 600px;
-      margin: 0 auto 1.5em;
-      color: var(--text-color);
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 1rem auto 2rem;
+      color: #e0e0e0;
     }
 
-    .button {
-      background: var(--accent);
-      color: #000;
-      border: none;
-      padding: 0.7em 1.5em;
-      border-radius: 30px;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-    }
-    .button:hover {
-      background: var(--hover);
-      color: #fff;
-      transform: translateY(-3px);
-    }
-
+    /* Navigation Bar */
     nav#nav {
-      background: var(--bg-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1em 2em;
+      background: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       position: sticky;
       top: 0;
       z-index: 100;
-      border-bottom: 2px solid var(--accent);
-    }
-
-    nav#nav .links a {
-      color: var(--text-color);
-      text-decoration: none;
-      font-weight: 500;
-      margin: 0 1em;
-      transition: color 0.3s ease;
-    }
-
-    nav#nav .links a:hover {
-      color: var(--accent);
-    }
-
-    .theme-toggle {
-      background: none;
-      border: 2px solid var(--accent);
-      color: var(--accent);
-      border-radius: 50%;
-      padding: 0.4em 0.5em;
-      font-size: 1.2em;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .theme-toggle:hover {
-      background: var(--accent);
-      color: #000;
-    }
-
-    .post {
-      background: #1a1a1a;
-      margin: 2em 0;
-      border-radius: 12px;
-      overflow: hidden;
-      transform: translateY(40px);
-      opacity: 0;
-      transition: transform 0.8s ease, opacity 0.8s ease, background 0.5s ease;
-    }
-
-    body.light .post {
-      background: #f4f4f4;
-    }
-
-    .post img {
-      width: 100%;
-      border-bottom: 3px solid var(--accent);
-    }
-
-    .post.visible {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    h2 a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    h2 a:hover {
-      color: var(--hover);
-    }
-
-    .major p, article p {
-      padding: 0 1.5em 1.5em;
-    }
-
-    .actions.special {
+      padding: 1em 2em;
       display: flex;
-      justify-content: center;
-      gap: 1em;
-      margin-bottom: 1.5em;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    #footer {
-      background: #111;
-      color: #aaa;
-      padding: 3em 2em;
-      text-align: center;
-      transition: background 0.5s ease, color 0.5s ease;
-    }
-
-    body.light #footer {
-      background: #eaeaea;
-      color: #222;
-    }
-
-    #footer h3 {
-      color: var(--accent);
-    }
-
-    .icons.alt a {
-      color: var(--accent);
-      margin: 0 0.5em;
+    nav#nav .logo {
       font-size: 1.4em;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    nav#nav .links a {
+      color: var(--text-dark);
+      margin: 0 1em;
+      font-weight: 500;
+    }
+    nav#nav .links a:hover {
+      color: var(--secondary-color);
+    }
+    nav#nav .icons a {
+      color: var(--text-dark);
+      margin-left: 1em;
+      font-size: 1.3em;
       transition: color 0.3s ease;
     }
-
-    .icons.alt a:hover {
-      color: var(--hover);
+    nav#nav .icons a:hover {
+      color: var(--secondary-color);
     }
 
-    /* Scroll animation trigger */
-    @media (prefers-reduced-motion: no-preference) {
-      .post:not(.visible) {
-        opacity: 0;
-        transform: translateY(50px);
+    /* Projects Section */
+    #main {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    article.post {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: 0.3s ease;
+    }
+    article.post:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    }
+    article.post img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    article.post h2 {
+      font-size: 1.2rem;
+      color: var(--text-dark);
+      padding: 1rem 1rem 0.5rem;
+    }
+    article.post p {
+      color: #555;
+      padding: 0 1rem 1rem;
+      font-size: 0.95rem;
+    }
+    article .actions {
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-bg);
+      color: #ccc;
+      text-align: center;
+      padding: 3rem 2rem;
+    }
+    footer h3 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+    footer a {
+      color: var(--primary-color);
+    }
+    footer a:hover {
+      color: var(--secondary-color);
+    }
+    footer .icons a {
+      margin: 0 0.4em;
+      color: var(--primary-color);
+      font-size: 1.3em;
+    }
+    footer .icons a:hover {
+      color: var(--secondary-color);
+    }
+
+    /* Back to Top Button */
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--primary-color);
+      color: #111;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: none;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+      transition: 0.3s ease;
+      z-index: 999;
+    }
+    #back-to-top:hover {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      #intro h1 {
+        font-size: 2.5rem;
+      }
+      nav#nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 600px) {
+      #intro {
+        padding: 4rem 1rem;
+      }
+      #intro h1 {
+        font-size: 2.1rem;
+      }
+      article.post img {
+        height: 180px;
       }
     }
   </style>
 </head>
 
-<body class="is-preload">
-  <div id="wrapper" class="fade-in">
+<body>
+  <!-- Intro -->
+  <section id="intro">
+    <h1>Hi, I'm Adharsh 👋</h1>
+    <p>Data whisperer turning complex numbers into clear business decisions.  
+      <a href="https://www.linkedin.com/in/adharsh-reddy-chirra/" target="_blank" style="color:var(--primary-color);">@Adharsh Reddy Chirra</a>
+    </p>
+    <a href="#main" class="button">View My Work</a>
+  </section>
 
-    <!-- Intro -->
-    <div id="intro">
-      <h1>Hi, I'm Adharsh 👋</h1>
-      <p>Data whisperer turning complex numbers into clear business decisions.  
-        <a href="https://www.linkedin.com/in/adharsh-reddy-chirra/" target="_blank" style="color:var(--accent);">@Adharsh Reddy Chirra</a>
-      </p>
-      <a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore My Work</a>
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="#intro" class="logo">Adharsh Portfolio</a>
+    <div class="links">
+      <a href="#main">Projects</a>
     </div>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/adharsh-reddy-chirra/" target="_blank" class="icon brands fa-linkedin"></a>
+      <a href="https://github.com/Adharsh-Reddy-Chirra" target="_blank" class="icon brands fa-github"></a>
+    </div>
+  </nav>
 
-    <!-- Nav -->
-    <nav id="nav">
-      <ul class="links">
-        <li><a href="#main">Projects</a></li>
-      </ul>
-      <div>
-        <button class="theme-toggle" id="theme-btn" title="Toggle Theme">🌙</button>
-        <a href="https://github.com/Adharsh-Reddy-Chirra" target="_blank" class="icon brands fa-github" style="margin-left:1em;"></a>
-      </div>
-    </nav>
+  <!-- Projects -->
+  <section id="main">
+    <div class="projects-grid">
 
-    <!-- Main -->
-    <div id="main">
-      <article class="post featured">
-        <header class="major">
-          <h2><a href="https://github.com/Adharsh-Reddy-Chirra/payment-fraud-detection-dashboard" target="_blank">Payment Fraud Detection</a></h2>
-        </header>
-        <a href="https://payment--fraud-detection.streamlit.app/" target="_blank" class="image main">
-          <img src="images/Fraud detection.png" alt="Payment Fraud Detection Dashboard" />
-        </a>
-        <p>End-to-end interactive dashboard using Python, SQL, ML, and Streamlit to detect and visualize payment fraud patterns. Showcases data engineering and analytics integration.</p>
-        <div class="actions special">
-          <a href="https://github.com/Adharsh-Reddy-Chirra/payment-fraud-detection-dashboard" target="_blank" class="button">View Project</a>
+      <article class="post">
+        <img src="images/Fraud detection.png" alt="Payment Fraud Detection">
+        <h2>Payment Fraud Detection</h2>
+        <p>Python, SQL, Machine Learning, and Streamlit-based dashboard to detect and visualize payment fraud patterns.</p>
+        <div class="actions">
           <a href="https://payment--fraud-detection.streamlit.app/" target="_blank" class="button">Try App</a>
+          <a href="https://github.com/Adharsh-Reddy-Chirra/payment-fraud-detection-dashboard" target="_blank" class="button">View Code</a>
         </div>
       </article>
 
-      <section class="posts">
-        <article>
-          <h2><a href="https://github.com/Adharsh-Reddy-Chirra/React-Blog-Application" target="_blank">Interactive Web Application</a></h2>
-          <a href="https://github.com/Adharsh-Reddy-Chirra/React-Blog-Application" target="_blank" class="image main"><img src="images/web application.png" alt="Web Application" /></a>
-          <p>React + Material UI blog application that recommends events based on real-time weather and location via multiple APIs.</p>
-          <div class="actions special"><a href="https://github.com/Adharsh-Reddy-Chirra/React-Blog-Application" class="button">View Project</a></div>
-        </article>
+      <article class="post">
+        <img src="images/web application.png" alt="Interactive Web Application">
+        <h2>Interactive Web Application</h2>
+        <p>Dynamic React and Material UI blog app that integrates real-time weather and event APIs for smart recommendations.</p>
+        <div class="actions">
+          <a href="https://github.com/Adharsh-Reddy-Chirra/React-Blog-Application" target="_blank" class="button">View Code</a>
+        </div>
+      </article>
 
-        <article>
-          <h2><a href="https://github.com/Adharsh-Reddy-Chirra/sentiment-analysis" target="_blank">Sentiment Analysis</a></h2>
-          <a href="https://github.com/Adharsh-Reddy-Chirra/sentiment-analysis" class="image fit"><img src="https://miro.medium.com/v2/resize:fit:670/1*Df-gJ2MOIZmoDKPVnva39A.png" alt="Sentiment Analysis" /></a>
-          <p>Twitter sentiment analysis using Python, pandas, and scikit-learn. Demonstrates classification and preprocessing on social media text data.</p>
-          <div class="actions special"><a href="https://github.com/Adharsh-Reddy-Chirra/sentiment-analysis" class="button">View Project</a></div>
-        </article>
-      </section>
+      <article class="post">
+        <img src="https://miro.medium.com/v2/resize:fit:670/1*Df-gJ2MOIZmoDKPVnva39A.png" alt="Sentiment Analysis">
+        <h2>Sentiment Analysis</h2>
+        <p>Classifies tweets using scikit-learn and NLP to understand sentiment trends from social media content.</p>
+        <div class="actions">
+          <a href="https://github.com/Adharsh-Reddy-Chirra/sentiment-analysis" target="_blank" class="button">View Project</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="https://log-hub.com/wp-content/uploads/2024/03/daa_route_optimization-scaled.webp" alt="Route Optimizer">
+        <h2>Route Optimizer</h2>
+        <p>Streamlit app optimizing delivery routes using Python and Geopy to minimize distance and fuel costs.</p>
+        <div class="actions">
+          <a href="https://shortest-route.streamlit.app/" target="_blank" class="button">Try App</a>
+          <a href="https://github.com/Adharsh-Reddy-Chirra/Streamlit-Delivery-Route-Optimizer" target="_blank" class="button">View Code</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="images/dashboard report.png" alt="Dashboard Review Report">
+        <h2>Dashboard Reviews Report</h2>
+        <p>React + ElasticSearch-powered tool that analyzes and visualizes Amazon product reviews with interactive charts.</p>
+        <div class="actions">
+          <a href="https://github.com/Adharsh-Reddy-Chirra/Reviews-Report-Dashboard-application" target="_blank" class="button">View Project</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="images/sql.png" alt="Database Model SQL">
+        <h2>Database Model using SQL</h2>
+        <p>SQL database design simulating an e-commerce inventory system with advanced query logic and schema structure.</p>
+        <div class="actions">
+          <a href="https://github.com/Adharsh-Reddy-Chirra/SQL-PROJECT" target="_blank" class="button">View Code</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="images/tableau.png" alt="Tableau Projects">
+        <h2>Tableau Dashboards</h2>
+        <p>A collection of Tableau business dashboards showing KPIs, user trends, and actionable data insights.</p>
+        <div class="actions">
+          <a href="https://public.tableau.com/app/profile/adharsh.reddy.chirra/vizzes" target="_blank" class="button">See Visuals</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="https://www.geckoboard.com/blog/content/images/size/w2000/2022/02/Excel-sales-dashboard-blog.png" alt="Excel Sales Dashboard">
+        <h2>Excel Sales Dashboard</h2>
+        <p>Data-driven Excel dashboard visualizing sales trends, KPIs, and customer insights using pivot tables and slicers.</p>
+        <div class="actions">
+          <a href="https://github.com/Adharsh-Reddy-Chirra/Excel-Sales-Dashboard" target="_blank" class="button">View Dashboard</a>
+        </div>
+      </article>
+
     </div>
+  </section>
 
-    <!-- Footer -->
-    <footer id="footer">
-      <h3>Let's Connect</h3>
-      <p>Boston, MA, USA</p>
-      <p><a href="mailto:adharsh.chirra@gmail.com">adharsh.chirra@gmail.com</a></p>
-      <p><a href="tel:7745197610">(774) 519-7610</a></p>
-      <div class="icons alt">
-        <a href="https://www.linkedin.com/in/adharsh-reddy-chirra/" class="icon brands fa-linkedin"></a>
-        <a href="https://github.com/Adharsh-Reddy-Chirra" class="icon brands fa-github"></a>
-      </div>
-    </footer>
-  </div>
+  <!-- Footer -->
+  <footer>
+    <h3>Let's Connect</h3>
+    <p>Boston, MA, USA</p>
+    <p><a href="mailto:adharsh.chirra@gmail.com">adharsh.chirra@gmail.com</a></p>
+    <p><a href="tel:7745197610">(774) 519-7610</a></p>
+    <div class="icons">
+      <a href="https://www.linkedin.com/in/adharsh-reddy-chirra/" class="icon brands fa-linkedin"></a>
+      <a href="https://github.com/Adharsh-Reddy-Chirra" class="icon brands fa-github"></a>
+    </div>
+  </footer>
 
-  <script src="assets/js/jquery.min.js"></script>
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Back to Top">↑</button>
+
   <script>
-    // Theme toggle functionality
-    const themeBtn = document.getElementById('theme-btn');
-    const body = document.body;
-    const savedTheme = localStorage.getItem('theme');
-
-    if (savedTheme === 'light') {
-      body.classList.add('light');
-      themeBtn.innerText = '🌙';
-    } else {
-      themeBtn.innerText = '☀️';
-    }
-
-    themeBtn.addEventListener('click', () => {
-      body.classList.toggle('light');
-      if (body.classList.contains('light')) {
-        localStorage.setItem('theme', 'light');
-        themeBtn.innerText = '🌙';
+    const topBtn = document.getElementById("back-to-top");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        topBtn.style.display = "block";
       } else {
-        localStorage.setItem('theme', 'dark');
-        themeBtn.innerText = '☀️';
+        topBtn.style.display = "none";
       }
     });
-
-    // Scroll reveal animation
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
+    topBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-    document.querySelectorAll('.post').forEach(post => observer.observe(post));
   </script>
 </body>
 </html>
