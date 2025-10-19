@@ -1,269 +1,296 @@
 <!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <title>Adharsh Reddy Chirra | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-<html>
-	<head>
-		<title>My Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <style>
+    :root {
+      --bg-color: #0a0a0a;
+      --text-color: #f5f5f5;
+      --accent: #f8c291;
+      --hover: #f0932b;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    body.light {
+      --bg-color: #ffffff;
+      --text-color: #1a1a1a;
+      --accent: #457b9d;
+      --hover: #1d3557;
+    }
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Hi, I'm Adharsh<br />
-						</h1>
-						<p>Data whisperer turning complex numbers into clear business decisions.<a href="https://www.linkedin.com/in/adharsh-reddy-chirra/" target="_blank">@Adharsh Reddy Chirra</a> 
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.5s ease, color 0.5s ease;
+      line-height: 1.6;
+    }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">My Work</a>
-					</header>
+    #intro {
+      text-align: center;
+      padding: 5em 2em;
+      background: linear-gradient(135deg, var(--bg-color), #1a1a1a);
+    }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-						
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/adharsh-reddy-chirra/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/Adharsh-Reddy-Chirra" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-				    
+    #intro h1 {
+      font-size: 3em;
+      color: var(--accent);
+      margin-bottom: 0.2em;
+    }
 
-				<!-- Main -->
-					<div id="main"> 
+    #intro p {
+      font-size: 1.1em;
+      max-width: 600px;
+      margin: 0 auto 1.5em;
+      color: var(--text-color);
+    }
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
+    .button {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      padding: 0.7em 1.5em;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background: var(--hover);
+      color: #fff;
+      transform: translateY(-3px);
+    }
 
-									<article>
-  <header>
-    <h2>
-      <a href="https://github.com/Adharsh-Reddy-Chirra/payment-fraud-detection-dashboard" target="_blank">
-        Payment Fraud Detection<br />
-      </a>
-    </h2>
-  </header>
+    nav#nav {
+      background: var(--bg-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 2px solid var(--accent);
+    }
 
-  <a href="https://github.com/Adharsh-Reddy-Chirra/payment-fraud-detection-dashboard" target="_blank" class="image main">
-    <img src="images/Fraud detection.png" alt="Payment Fraud Detection Dashboard" />
-  </a>
+    nav#nav .links a {
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 500;
+      margin: 0 1em;
+      transition: color 0.3s ease;
+    }
 
-  <p>
-    This project demonstrates an end-to-end interactive dashboard built with Python, SQL, machine learning, and Streamlit
-    to detect, analyze, and visualize payment fraud patterns. Designed to showcase data engineering, fraud analytics, and visualization.
-  </p>
+    nav#nav .links a:hover {
+      color: var(--accent);
+    }
 
-  <p>
-    <a href="https://payment--fraud-detection.streamlit.app/" target="_blank" class="button primary">
-      Launch Interactive Dashboard
-    </a>
-  </p>
+    .theme-toggle {
+      background: none;
+      border: 2px solid var(--accent);
+      color: var(--accent);
+      border-radius: 50%;
+      padding: 0.4em 0.5em;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .theme-toggle:hover {
+      background: var(--accent);
+      color: #000;
+    }
 
-  <ul class="actions special">
-    <li>
-      <a href="https://github.com/Adharsh-Reddy-Chirra/payment-fraud-detection-dashboard" target="_blank" class="button">
-        View Project
-      </a>
-    </li>
-    <li>
-      <a href="https://payment--fraud-detection.streamlit.app/" target="_blank" class="button primary">
-        Try the App
-      </a>
-    </li>
-  </ul>
-</article>
-		
-						<!-- Posts -->
-							<section class="posts">
+    .post {
+      background: #1a1a1a;
+      margin: 2em 0;
+      border-radius: 12px;
+      overflow: hidden;
+      transform: translateY(40px);
+      opacity: 0;
+      transition: transform 0.8s ease, opacity 0.8s ease, background 0.5s ease;
+    }
 
+    body.light .post {
+      background: #f4f4f4;
+    }
 
-          <article>
-                     <h2><a href="https://github.com/Adharsh-Reddy-Chirra/React-Blog-Application" target="_blank">Interactive Web application<br />
-									</a></h2>
-									<p>This is a blog application built with React and Material UI that shows weather info and recommends events like restaurants, concerts, and sports based on your location and weather using various Api keys.</p>
-								</header>
-								<a href="https://github.com/Adharsh-Reddy-Chirra/React-Blog-Application" target="_blank" class="image main"><img src="images/web application.png" alt="" /></a>
-								<ul class="actions special">
-									<li><a href="https://github.com/Adharsh-Reddy-Chirra/React-Blog-Application" target="_blank" class="button large">View Project</a></li>
-								</ul>
-							</article>
-								
+    .post img {
+      width: 100%;
+      border-bottom: 3px solid var(--accent);
+    }
 
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/Adharsh-Reddy-Chirra/sentiment-analysis" target="_blank">Sentiment Analysis<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Adharsh-Reddy-Chirra/sentiment-analysis" target="_blank" class="image fit"><img src="https://miro.medium.com/v2/resize:fit:670/1*Df-gJ2MOIZmoDKPVnva39A.png" alt="" /></a>
-									<p> This project shows you, with simple code and explanations, how to load, clean, and analyze tweets for sentiment (positive or negative) using Python tools like pandas and scikit-learn, based on the Twitter Sentiment Analysis Dataset from Kaggle </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Adharsh-Reddy-Chirra/sentiment-analysis" target="_blank" class="button">View Project</a></li>
-									</ul>
-								</article>
+    .post.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
 
+    h2 a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-<article>
-  <header>
-    <h2>
-      <a href="https://github.com/Adharsh-Reddy-Chirra/Streamlit-Delivery-Route-Optimizer" target="_blank">
-        Route Optimizer<br />
-      </a>
-    </h2>
-  </header>
+    h2 a:hover {
+      color: var(--hover);
+    }
 
-  <a href="https://github.com/Adharsh-Reddy-Chirra/Streamlit-Delivery-Route-Optimizer" target="_blank" class="image fit">
-    <img src="https://log-hub.com/wp-content/uploads/2024/03/daa_route_optimization-scaled.webp" alt="Delivery Route Optimizer Dashboard" />
-  </a>
+    .major p, article p {
+      padding: 0 1.5em 1.5em;
+    }
 
-  <p>
-    Developed an interactive Streamlit web app that optimizes multi-driver delivery routes to minimize total distance and fuel costs. Built with Python and geopy, the project demonstrates real-world logistics optimization and quantifies ROI using free geocoding and a greedy routing algorithm.
-  </p>
+    .actions.special {
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      margin-bottom: 1.5em;
+    }
 
-  <p>
-    <a href="https://shortest-route.streamlit.app/" target="_blank" class="button primary">
-      Launch Interactive Dashboard
-    </a>
-  </p>
+    #footer {
+      background: #111;
+      color: #aaa;
+      padding: 3em 2em;
+      text-align: center;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
 
-  <ul class="actions special">
-    <li>
-      <a href="https://github.com/Adharsh-Reddy-Chirra/Streamlit-Delivery-Route-Optimizer" target="_blank" class="button">
-        View Project
-      </a>
-    </li>
-    <li>
-      <a href="https://shortest-route.streamlit.app/" target="_blank" class="button primary">
-        Try the App
-      </a>
-    </li>
-  </ul>
-</article>
-								
-								
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/Adharsh-Reddy-Chirra/Reviews-Report-Dashboard-application" target="_blank">Dashboard Reviews Repot<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Adharsh-Reddy-Chirra/Reviews-Report-Dashboard-application" target="_blank" class="image fit"><img src="images/dashboard report.png" alt="" /></a>
-									<p>This project is a dashboard application built using React. It stores and queries Amazon product reviews from two Amazon Reviews datasets using ElasticSearch. </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Adharsh-Reddy-Chirra/Reviews-Report-Dashboard-application" target="_blank" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/Adharsh-Reddy-Chirra/SQL-PROJECT" target="_blank">Database Model using SQL<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Adharsh-Reddy-Chirra/SQL-PROJECT" target="_blank" class="image fit"><img src="images/sql.png" alt="" /></a>
-									<p>It is designed to showcase the structure and functionality of an simple inventory management system similar to Amazon's using SQL. </p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Adharsh-Reddy-Chirra/SQL-PROJECT" target="_blank" class="button">View Project</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="https://public.tableau.com/app/profile/adharsh.reddy.chirra/vizzes" target="_blank">Tableau Projects<br />
-										</a></h2>
-									</header>
-									<a href="https://public.tableau.com/app/profile/adharsh.reddy.chirra/vizzes" target="_blank" class="image fit"><img src="images/tableau.png" alt="" /></a>
-									<p>This is a Collection of all my Tableau visualizations & Dashboards.</p>
-									<ul class="actions special">
-										<li><a href="https://public.tableau.com/app/profile/adharsh.reddy.chirra/vizzes" target="_blank" class="button">View Visualizations</a></li>
-									</ul>
-								</article>
-								<article>
-									<header>
-										
-										<h2><a href="https://github.com/Adharsh-Reddy-Chirra/Excel-Sales-Dashboard" target="_blank">Excel Sales Dashboard<br />
-										</a></h2>
-									</header>
-									<a href="https://github.com/Adharsh-Reddy-Chirra/Excel-Sales-Dashboard" target="_blank" class="image fit"><img src="https://www.geckoboard.com/blog/content/images/size/w2000/2022/02/Excel-sales-dashboard-blog.png" alt="" /></a>
-									<p> This is an interactive Bike Sales Dashboard built using Microsoft Excel. The dashboard provides key insights into bike sales, including total revenue, product performance, customer demographics, and sales trends. It utilizes pivot tables, charts, slicers, and conditional formatting to visualize data effectively.</p>
-									<ul class="actions special">
-										<li><a href="https://github.com/Adharsh-Reddy-Chirra/Excel-Sales-Dashboard" target="_blank" class="button">View Dashboard</a></li>
-									</ul>
-								</article>
-								
-							</section>
+    body.light #footer {
+      background: #eaeaea;
+      color: #222;
+    }
 
-						
+    #footer h3 {
+      color: var(--accent);
+    }
 
-					</div>
+    .icons.alt a {
+      color: var(--accent);
+      margin: 0 0.5em;
+      font-size: 1.4em;
+      transition: color 0.3s ease;
+    }
 
-				<!-- Footer -->
-					<footer id="footer">
-						
-						
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>Boston, MA, USA<br />
-								</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(774) 519-7610</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">adharsh.chirra@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									
-									<li><a href="https://www.linkedin.com/in/adharsh-reddy-chirra/" target="_blank" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									<li><a href="https://github.com/Adharsh-Reddy-Chirra" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+    .icons.alt a:hover {
+      color: var(--hover);
+    }
 
-				
+    /* Scroll animation trigger */
+    @media (prefers-reduced-motion: no-preference) {
+      .post:not(.visible) {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+    }
+  </style>
+</head>
 
-			</div>
+<body class="is-preload">
+  <div id="wrapper" class="fade-in">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Intro -->
+    <div id="intro">
+      <h1>Hi, I'm Adharsh 👋</h1>
+      <p>Data whisperer turning complex numbers into clear business decisions.  
+        <a href="https://www.linkedin.com/in/adharsh-reddy-chirra/" target="_blank" style="color:var(--accent);">@Adharsh Reddy Chirra</a>
+      </p>
+      <a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore My Work</a>
+    </div>
 
-	</body>
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="#main">Projects</a></li>
+      </ul>
+      <div>
+        <button class="theme-toggle" id="theme-btn" title="Toggle Theme">🌙</button>
+        <a href="https://github.com/Adharsh-Reddy-Chirra" target="_blank" class="icon brands fa-github" style="margin-left:1em;"></a>
+      </div>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+      <article class="post featured">
+        <header class="major">
+          <h2><a href="https://github.com/Adharsh-Reddy-Chirra/payment-fraud-detection-dashboard" target="_blank">Payment Fraud Detection</a></h2>
+        </header>
+        <a href="https://payment--fraud-detection.streamlit.app/" target="_blank" class="image main">
+          <img src="images/Fraud detection.png" alt="Payment Fraud Detection Dashboard" />
+        </a>
+        <p>End-to-end interactive dashboard using Python, SQL, ML, and Streamlit to detect and visualize payment fraud patterns. Showcases data engineering and analytics integration.</p>
+        <div class="actions special">
+          <a href="https://github.com/Adharsh-Reddy-Chirra/payment-fraud-detection-dashboard" target="_blank" class="button">View Project</a>
+          <a href="https://payment--fraud-detection.streamlit.app/" target="_blank" class="button">Try App</a>
+        </div>
+      </article>
+
+      <section class="posts">
+        <article>
+          <h2><a href="https://github.com/Adharsh-Reddy-Chirra/React-Blog-Application" target="_blank">Interactive Web Application</a></h2>
+          <a href="https://github.com/Adharsh-Reddy-Chirra/React-Blog-Application" target="_blank" class="image main"><img src="images/web application.png" alt="Web Application" /></a>
+          <p>React + Material UI blog application that recommends events based on real-time weather and location via multiple APIs.</p>
+          <div class="actions special"><a href="https://github.com/Adharsh-Reddy-Chirra/React-Blog-Application" class="button">View Project</a></div>
+        </article>
+
+        <article>
+          <h2><a href="https://github.com/Adharsh-Reddy-Chirra/sentiment-analysis" target="_blank">Sentiment Analysis</a></h2>
+          <a href="https://github.com/Adharsh-Reddy-Chirra/sentiment-analysis" class="image fit"><img src="https://miro.medium.com/v2/resize:fit:670/1*Df-gJ2MOIZmoDKPVnva39A.png" alt="Sentiment Analysis" /></a>
+          <p>Twitter sentiment analysis using Python, pandas, and scikit-learn. Demonstrates classification and preprocessing on social media text data.</p>
+          <div class="actions special"><a href="https://github.com/Adharsh-Reddy-Chirra/sentiment-analysis" class="button">View Project</a></div>
+        </article>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <h3>Let's Connect</h3>
+      <p>Boston, MA, USA</p>
+      <p><a href="mailto:adharsh.chirra@gmail.com">adharsh.chirra@gmail.com</a></p>
+      <p><a href="tel:7745197610">(774) 519-7610</a></p>
+      <div class="icons alt">
+        <a href="https://www.linkedin.com/in/adharsh-reddy-chirra/" class="icon brands fa-linkedin"></a>
+        <a href="https://github.com/Adharsh-Reddy-Chirra" class="icon brands fa-github"></a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script>
+    // Theme toggle functionality
+    const themeBtn = document.getElementById('theme-btn');
+    const body = document.body;
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'light') {
+      body.classList.add('light');
+      themeBtn.innerText = '🌙';
+    } else {
+      themeBtn.innerText = '☀️';
+    }
+
+    themeBtn.addEventListener('click', () => {
+      body.classList.toggle('light');
+      if (body.classList.contains('light')) {
+        localStorage.setItem('theme', 'light');
+        themeBtn.innerText = '🌙';
+      } else {
+        localStorage.setItem('theme', 'dark');
+        themeBtn.innerText = '☀️';
+      }
+    });
+
+    // Scroll reveal animation
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    document.querySelectorAll('.post').forEach(post => observer.observe(post));
+  </script>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
